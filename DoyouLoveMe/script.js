@@ -36,6 +36,7 @@ noBtn.addEventListener("mouseover", () => {
     noBtn.style.position = "fixed"; // ใช้ fixed เพื่อให้อ้างอิงกับหน้าจอได้แม่นยำ
     noBtn.style.left = randomX + "px";
     noBtn.style.top = randomY + "px";
-    noBtn.style.zIndx = "999";
+    noBtn.style.zIndex = "999";
 });
 
+/* ทำต่อให้ครบทุกเมนูตามระยะห่างจริงของคุณ... */
