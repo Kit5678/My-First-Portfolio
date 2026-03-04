@@ -28,13 +28,20 @@ nav ul {
 }
 
 .hero {
-    height: 60yh;
+    font-size: 4 rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+}
+
+.hero p {
+    font-size: 1.5rem;
 }
 
 #projects {
@@ -49,11 +56,20 @@ nav ul {
 }
 
 .project-card {
-    background: white;
-    padding: 20px;
+    background: #60B5C4;
+    margin-top: 50px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0 5px rgba(0,0,0,0.1);
     transition: transform 0.3s;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 20px;
+    text-align: left;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -61,6 +77,63 @@ nav ul {
 }
 
 .project-card img {
-    width: 100%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.btn-view {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #0044cc;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-view:hover {
+    background: #667eea;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-right: 15px;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    margin-right: 20px;
+    flex-grow: 1;
+}
+
+.btn-view {
+    font-size: 0.9rem;
+    padding: 10px 18px;
+    white-space: nowrap;
+}
+
+.card-text {
+    flex: 1;    
+    text-align: left;
+    min-width: 0;
+}
+
+.card-text h3 {
+    font-size: 1.5rem;
+    margin-top: 5px;
+}
+
+.card-text p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.btn-view {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 12px 20px;
 }
