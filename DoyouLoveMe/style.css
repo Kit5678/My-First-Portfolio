@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffeef2;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #e91e63;
+    margin-bottom: 30px;
+}
+
+.gif {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.btn-group {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    margin-top: 20px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.yes-btn, .no-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.no-btn {
+    background-color: #fff;
+    color: #e91e63;
+    transition: 0.1s ease;
+}
+
+.yes-btn {
+    background-color: #e91e63;
+    color: white;
+}
