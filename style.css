@@ -86,26 +86,31 @@ nav ul {
   margin: 30px auto;
 }
 
-.my-work-title {
-  background: linear-gradient(135deg, #54a0ff, #00d2ff);
+.section-title {
+  background: #74b9ff;
+
   margin-top: 50px;
-  border-radius: 25px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s;
-  display: flex;
+  margin-left: 5%;
+  margin-bottom: 20px;
+
+  padding: 10px 25px;
+
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: scale(1.05);
+  display: inline-block;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 50px;
+
   gap: 10px;
   text-align: left;
   overflow: hidden;
-  width: 90%;
-  max-width: 1000px;
-  margin: 0 auto 30px auto;
 
-  font-size: 2.5rem;
+  text-align: left;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: #2d3436;
+  color: #2c3e50;
+  cursor: default;
 }
 
 .project-card:hover {
@@ -201,9 +206,10 @@ nav a {
   z-index: 1;
   background: linear-gradient(135deg, #667eea, #764ba2);
   border-radius: 6px;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
   opacity: 0;
   width: 20%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 nav:hover .nav-indicator {
@@ -248,3 +254,23 @@ nav a:nth-child(5):hover ~ .nav-indicator {
   color: #34495e;
   font-weight: 500;
 }
+
+nav:hover .nav-indicator {
+  opacity: 1;
+}
+
+nav a:hover ~ .nav-indicator {
+    opacity: 1 !important;
+}
+/* 1. สั่งให้ Indicator แสดงผลและอยู่ที่ตำแหน่ง 0% เมื่อปุ่มที่ 1 มี class active */
+nav a:nth-child(1).active ~ .nav-indicator { opacity: 1; left: 0; }
+
+/* 2. สั่งให้อยู่ที่ 20% เมื่อปุ่มที่ 2 มี class active */
+nav a:nth-child(2).active ~ .nav-indicator { opacity: 1; left: 20%; }
+
+/* 3. สั่งให้อยู่ที่ 40% เมื่อปุ่มที่ 3 มี class active (เช่น หน้า Products) */
+nav a:nth-child(3).active ~ .nav-indicator { opacity: 1; left: 40%; }
+
+/* ⚠️ สำคัญมาก: เมื่อเราเอาเมาส์ไปชี้ปุ่มอื่น ให้ไฮไลต์วิ่งตามเมาส์ (Override ค่า active) */
+
+
