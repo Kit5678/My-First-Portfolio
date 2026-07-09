@@ -1,38 +1,71 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="th">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&display=swap" rel="stylesheet">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="home-page">
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./About/about.html">AboutMe</a>
+      <a href="#">Products</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <span class="nav-indicator"></span>
+    </nav>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="About/about.html">AboutMe</a>
-            <a href="#">Products</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <span class="nav-indicator"></span>
-        </nav>
-        <section id="home" class="hero">
-            <h1>Hello, My name is Kitsakorn</h1>
-            <p>Welcome to my Program</p>
-        </section>
-        
-        <section id="projects">
-            <h2 class="section-title">My work</h2>
+    <main class="home-shell">
+      <section id="home" class="hero home-panel">
+        <p class="eyebrow">PORTFOLIO</p>
+        <h1>Hello, My name is Kitsakorn</h1>
+        <p class="hero-copy">
+        </p>
+        <div class="cta-row">
+          <a class="btn-primary" href="./About/about.html">About Me</a>
+          <a class="btn-ghost" href="#projects">My Projects</a>
+        </div>
+      </section>
 
-            <div class="project-card">
-                <img src="DoyouLoveMe\main.png" alt="Do You Love Me Project">
-                <div class="card-text">
-                <h3>Do You Love Me? Web</h3>
-                <p>เว็บ Interactive สนุกๆ ที่ปุ่ม No จะวิ่งหนีคุณ!</p>
+      <section id="projects" class="projects-section">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <img src="DoyouLoveMe/main.png" alt="Do You Love Me Project" />
+            <div class="card-text">
+              <p class="project-eyebrow">Interactive Web</p>
+              <h3>Do You Love Me? Web</h3>
+              <p>
+                เว็บโต้ตอบที่ออกแบบให้มีจังหวะสนุกและชวนให้ผู้ใช้มีส่วนร่วมแบบทันที
+              </p>
             </div>
-                <a href="DoyouLoveMe/index.html" class="btn-view">See the work</a>
+            <a href="DoyouLoveMe/index.html" class="btn-view">Open Project</a>
+          </article>
+
+          <article class="project-card">
+            <div class="project-preview" aria-hidden="true">Menu AI</div>
+            <div class="card-text">
+              <p class="project-eyebrow">Menu / AI App</p>
+              <h3>Menu AI</h3>
+              <p>
+                โปรเจกต์นี้เปลี่ยนมาใช้ไฟล์จากโฟลเดอร์
+                <code>menu-ai</code> แทน <code>menu-ai-v2</code>
+              </p>
             </div>
-        </section>
-    </body>
+            <a href="./menu-ai/frontend/dist/index.html" class="btn-view">Open Project</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="scriptHome.js"></script>
+  </body>
 </html>

@@ -1,32 +1,59 @@
-  const nav = document.querySelector('nav');
-  const indicator = document.querySelector('.nav-indicator');
-  const links = document.querySelectorAll('nav a');
-  const activeLink = document.querySelector('nav a.active');
+﻿document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav");
+  if (!nav) return;
 
-  // ฟังก์ชันย้าย Indicator ไปยังตำแหน่งที่ระบุ
+  const indicator = nav.querySelector(".nav-indicator");
+  const links = nav.querySelectorAll("a[href]");
+  if (!indicator || links.length === 0) return;
+
+  const currentPath = new URL(window.location.href).pathname.replace(/\/+$/, "");
+
+  links.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (!href || href.startsWith("#")) return;
+
+    let linkPath = "";
+    try {
+      linkPath = new URL(href, document.baseURI).pathname.replace(/\/+$/, "");
+    } catch (_) {
+      return;
+    }
+
+    const isHomeMatch =
+      (currentPath === "" || currentPath === "/") && linkPath.endsWith("/index.html");
+
+    if (linkPath === currentPath || isHomeMatch) {
+      link.classList.add("active");
+    }
+  });
+
+  const activeLink = nav.querySelector("a.active");
+
   function moveIndicator(el) {
-    indicator.style.width = el.offsetWidth + 'px';
-    indicator.style.left = el.offsetLeft + 'px';
-    indicator.style.opacity = '1';
+    indicator.style.width = el.offsetWidth + "px";
+    indicator.style.left = el.offsetLeft + "px";
+    indicator.style.opacity = "1";
   }
 
-  // ตอนเอาเมาส์ชี้
-  links.forEach(link => {
-    link.addEventListener('mouseenter', (e) => {
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", (e) => {
       moveIndicator(e.target);
     });
   });
 
-  // ตอนเอาเมาส์ออก ให้กลับไปที่หน้า Active
-  nav.addEventListener('mouseleave', () => {
+  nav.addEventListener("mouseleave", () => {
     if (activeLink) {
       moveIndicator(activeLink);
     } else {
-      indicator.style.opacity = '0';
+      indicator.style.opacity = "0";
     }
   });
 
-  // ตั้งค่าเริ่มต้นตอนโหลดหน้าเว็บ
   if (activeLink) {
     moveIndicator(activeLink);
   }
+
+  window.addEventListener("resize", () => {
+    if (activeLink) moveIndicator(activeLink);
+  });
+});

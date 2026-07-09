@@ -1,35 +1,108 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="th">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me - Kitsakorn</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="about-page">
     <nav>
-            <a href="/index.html">Home</a>
-            <a href="#">AboutMe</a>
-            <a href="#">Products</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <span class="nav-indicator"></span>
-        </nav>
+      <a href="../index.html">Home</a>
+      <a class="active" href="./about.html">AboutMe</a>
+      <a href="#">Products</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+      <span class="nav-indicator"></span>
+    </nav>
 
-    <section style="text-align: center; padding: 50px">
-      <h2 class="section-title">แนะนำตัว</h2>
+    <main class="about-shell">
+      <section class="about-hero about-panel">
+        <div class="about-copy">
+          <p class="eyebrow">ABOUT ME</p>
+          <h1>KITSAKORN</h1>
+          <p class="hero-subtitle">
+          </p>
 
-      <div class="profile-content">
-        <img
-          src="../IT4369.jpg"
-          style="width: 200px; border-radius: 50%; border: 5px solid #74b9ff"
-        />
+          <div class="info-strip">
+            <div class="info-chip">
+              <span class="chip-label">Name</span>
+              <span class="chip-value">Kitsakorn Chuanhchot</span>
+            </div>
+            <div class="info-chip">
+              <span class="chip-label">บทบาท</span>
+              <span class="chip-value">Frontend Developer</span>
+            </div>
+            <div class="info-chip">
+              <span class="chip-label">สถานที่</span>
+              <span class="chip-value">ใส่จังหวัด / ประเทศ</span>
+            </div>
+          </div>
+        </div>
 
-        <h1 style="margin-top: 20px">Kitsakorn</h1>
-        <p style="max-width: 600px; margin: 20px auto; line-height: 1.6">
-          ยินดีที่ได้รู้จักครับ! ผมสนใจด้านการเขียนโปรแกรม...
-        </p>
-      </div>
-    </section>
+        <div class="photo-frame" aria-label="พื้นที่วางรูปโปรไฟล์">
+          <div class="photo-frame-inner">
+            <p class="photo-kicker">PHOTO PLACEHOLDER</p>
+            <h2>วางรูปของคุณตรงนี้</h2>
+            <p>กรอบนี้ออกแบบไว้สำหรับรูปโปรไฟล์ 1 จุดเท่านั้น</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-grid-section">
+        <article class="about-panel text-card">
+          <p class="card-index"></p>
+          <h2>Profile</h2>
+          <p class="placeholder-text">
+            ใส่ข้อความแนะนำตัวของคุณตรงนี้ เช่น สายงาน ความสนใจ
+            และภาพรวมสั้น ๆ ของตัวคุณ
+          </p>
+        </article>
+
+        <article class="about-panel text-card">
+          <p class="card-index"></p>
+          <h2>Skills</h2>
+          <p class="placeholder-text">
+            Core: HTML, CSS, JavaScript<br>
+            Framrworks: React, Tailwind CSS, vite<br>
+            Tools: Git, GitHub, VS Code
+          </p>
+        </article>
+
+        <article class="about-panel text-card">
+          <p class="card-index"></p>
+          <h2>Education</h2>
+          <p class="placeholder-text">
+            Rajabhat Ubon Ratchathani University 2023 - 2026
+          </p>
+        </article>
+
+        <article class="about-panel text-card wide-card">
+          <p class="card-index"></p>
+          <h2>Story</h2>
+          <p class="placeholder-text">
+            ใส่เรื่องราวสั้น ๆ ว่าคุณชอบอะไร เริ่มสนใจงานด้านนี้ได้อย่างไร
+            และเป้าหมายต่อไปของคุณคืออะไร
+          </p>
+        </article>
+
+        <article class="about-panel text-card wide-card">
+          <p class="card-index"></p>
+          <h2>Contact</h2>
+          <p class="placeholder-text">
+            Phone: 064-626-7605<br>
+            Email: kitsakornkiki46@gmail.com
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script src="../scriptHome.js"></script>
   </body>
 </html>
