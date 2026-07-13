@@ -72,13 +72,13 @@ button {
 }
 
 .home-btn {
-    position: fixed;   /* ทำให้ปุ่มลอย */
-    top: 20px;      /* ห่างจากขอบล่าง 20px */
-    right: 20px;       /* ห่างจากขอบขวา 20px */
-    text-decoration: none; /* เอาเส้นใต้ปุ่มออก (ถ้าต้องการ) */
-    background-color: #ff4d6d; /* ใส่สีพื้นหลัง (ถ้าต้องการ) */
-    color: white;      /* สีตัวอักษร */
-    padding: 10px 20px; /* เพิ่มพื้นที่รอบตัวอักษร */
-    border-radius: 20px; /* ทำมุมโค้ง */
-    z-index: 1000;     /* มั่นใจว่าปุ่มจะอยู่ทับเลเยอร์อื่น */
-}                                                                                        
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    background-color: #ff4d6d;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    z-index: 1000;
+}
